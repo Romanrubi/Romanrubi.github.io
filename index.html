@@ -3,58 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your GitHub Portfolio</title>
+    <title>Roman Rubinshtein Portfolio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
+            font-family: 'Work Sans', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            background-color: #f5f5f5;
         }
-        
+
+        .header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-weight: 600;
+            margin: 0;
+        }
+
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             padding: 2rem;
             text-align: center;
         }
-        
-        h1 {
-            color: #333;
-            margin-bottom: 1rem;
+
+        .intro {
+            margin: 3rem 0;
+            font-size: 1.2rem;
         }
-        
-        .bio {
-            background-color: white;
-            padding: 2rem;
+
+        .image-placeholder {
+            background-color: #f5e6c9;
+            width: 100%;
+            max-width: 800px;
+            height: 400px;
+            margin: 2rem auto;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        
+
+        .section {
+            margin: 4rem 0;
+        }
+
+        .section h2 {
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: #555;
+        }
+
         .datetime {
             color: #666;
-            font-size: 0.9rem;
+            font-size: 1rem;
             margin-top: 2rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding: 2rem;
+            background-color: #333;
+            color: white;
+            width: 100%;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>Roman Rubinshtein</h1>
+    </div>
+
     <div class="container">
-        <h1>[Your Name]</h1>
-        
-        <div class="bio">
+        <div class="intro">
+            Welcome to my personal portfolio. Feel free to explore and get to know more about me.
+        </div>
+
+        <div class="image-placeholder"></div>
+
+        <div class="section">
+            <h2>About Me</h2>
             <p>
-                [Insert your personal description here. For example:
-                I am a passionate developer focused on creating innovative solutions.
-                My expertise includes [your skills] and I'm currently working on [your current projects].]
+                I am a passionate professional always eager to learn and create impactful solutions. 
+                This is a simple webpage that reflects my creativity and dedication.
             </p>
         </div>
-        
+
+        <div class="image-placeholder"></div>
+
+        <div class="section">
+            <h2>Projects</h2>
+            <p>
+                Here are some of my recent projects. Each one represents a challenge I overcame and a skill I mastered.
+            </p>
+        </div>
+
         <div class="datetime">
             <script>
                 function updateDateTime() {
@@ -62,12 +120,16 @@
                     document.getElementById('current-time').textContent = 
                         now.toLocaleDateString() + ' ' + now.toLocaleTimeString();
                 }
-                
+
                 setInterval(updateDateTime, 1000);
                 updateDateTime();
             </script>
             <span id="current-time"></span>
         </div>
     </div>
+
+    <footer>
+        <p>Roman Rubinshtein | &copy; 2025 All rights reserved.</p>
+    </footer>
 </body>
 </html>
